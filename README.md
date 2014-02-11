@@ -241,6 +241,18 @@ Examples:
   privileged: true
 ```
 
+### ssh_host_port (for only boot2docker user)
+
+Set the SSH_HOST_PORT value of boot2docker VM for NAT networking.
+
+Examples:
+
+```yml
+driver:
+  name: docker
+  ssh_host_port: 2022
+```
+
 ## Development
 
 * Source hosted at [GitHub][repo]

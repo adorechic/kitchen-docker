@@ -1,3 +1,4 @@
+
 # -*- encoding: utf-8 -*-
 #
 # Copyright (C) 2013, Sean Porter
@@ -65,7 +66,7 @@ module Kitchen
         state[:image_id] = create_image(state) unless state[:image_id]
         state[:container_id] = create_container(state) unless state[:container_id]
         state[:hostname] = container_ssh_host
-        state[:port] = container_ssh_port(state)
+        state[:port] = config[:ssh_host_port] || container_ssh_port(state)
         wait_for_sshd(state[:hostname], nil, :port => state[:port])
       end
 
